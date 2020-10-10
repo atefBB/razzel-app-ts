@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import fetch from 'cross-fetch';
-import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   fetch(`http://${process.env.HOST}:${process.env.PORT}/api`)
