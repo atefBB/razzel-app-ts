@@ -15,6 +15,12 @@ syncLoadAssets();
 const server = express()
   .disable('x-powered-by')
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR!))
+  .get("/api", (req: express.Request, res: express.Response) => {
+	res.json(JSON.stringify({
+		error: false,
+		message: "What you are trying to do?"
+	}));
+  })
   .get('/*', (req: express.Request, res: express.Response) => {
     const context = {};
     const markup = renderToString(
