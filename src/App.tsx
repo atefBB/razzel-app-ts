@@ -5,7 +5,7 @@ import fetch from 'cross-fetch';
 import "./App.css";
 
 export default function App() {
-  fetch("/api")
+  fetch(`http://${process.env.HOST}:${process.env.PORT}/api`)
     .then(res => res.json())
     .then(data => console.log(data));
 
