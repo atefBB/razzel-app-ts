@@ -48,6 +48,7 @@ export default function Home() {
                   <Form.Control
                     type="email"
                     name="email"
+		    placeholder="Enter your email"
                     onChange={handleChange}
                     onBlur={handleBlur}
                     value={values.email}
@@ -59,6 +60,7 @@ export default function Home() {
                   <Form.Label htmlFor="password">Password</Form.Label>
                   <Form.Control
                     type="password"
+		    placeholder="Enter your password"
                     name="password"
                     onChange={handleChange}
                     onBlur={handleBlur}
