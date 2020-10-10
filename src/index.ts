@@ -15,6 +15,7 @@ if (module.hot) {
 }
 
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+const host = process.env.HOST? process.env.HOST : "localhost";
 
 export default express()
   .use((req, res) => app.handle(req, res))
@@ -23,5 +24,5 @@ export default express()
       console.error(err);
       return;
     }
-    console.log(`> App started http://localhost:${port}`)
+    console.log(`> App started http://${host}:${port}`)
   });
